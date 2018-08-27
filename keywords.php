@@ -1,6 +1,6 @@
 <?php
 // include simple_html_dom
-include 'include/simplehtmldom_1_5/simple_html_dom.php';
+include 'include/simple_html_dom.php';
 
 // getKeywords Top 20
 function getKeywords()
