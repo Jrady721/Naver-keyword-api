@@ -1,18 +1,26 @@
-# Naver-keyword-api (네이버 실시간 검색어 API)
+# naver-keyword-api (네이버 실시간 검색어 API)
 
 ### API 설명
 ```
 네이버 실시간 검색어 TOP 20을 가져올 수 있습니다.
 ```
 
-### GET (TOP 20 네이버 실시간 검색어 가져오기)
-**http://jrady721.cafe24.com/api/keyword (GET)**
+### 버전 관리 (현재버전: V1.01)
+```
+V1.00
+ - 네이버 실시간 검색어 가져오기 구현
+V1.01
+ - simple_html_dom 1.8.1 업데이트
+```
 
-> Result:
+### GET (TOP 20 네이버 실시간 검색어 가져오기)
+**http://jrady721.cafe24.com/api/keywords (GET)**
+
+> Result: 결과는 다를 수 있습니다.
 ```json
 {
     "status": "200",
-    "list": {
+    "keywords": {
         "1": "아시안게임 롤 중계 ",
         "2": "대웅제약 ",
         "3": "함승희 ",
@@ -37,5 +45,5 @@
 }
 ```
 
-### 활용 (일정시간마다 실시간 검색어 불러오기)
-http://jrady721.cafe24.com/keyword
+### 활용
+http://jrady721.cafe24.com/keywords (1초 마다 실시간 검색어 갱신하기)

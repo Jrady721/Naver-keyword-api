@@ -12,12 +12,13 @@ function getKeywords()
 
     $keyword = array("status" => '200');
 
-    $list = array();
+    $keywords = array();
     foreach ($html->find('.ah_k') as $index => $element) {
         if ($index == 20) break;
-        $list[$index + 1] = $element->plaintext;
+        $keywords[$index + 1] = $element->plaintext;
     }
-    $keyword['list'] = $list;
+
+    $keyword['keywords'] = $keywords;
 
     // return json
     return json_encode($keyword, JSON_UNESCAPED_UNICODE + JSON_PRETTY_PRINT);
